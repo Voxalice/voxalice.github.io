@@ -1,0 +1,2629 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)./projects/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+    <!-- Google Tag Manager -->
+    <script type="text/javascript" async="" src="./PaddlerGames_files/ga.js.download"></script><script type="text/javascript" async="" src="./PaddlerGames_files/recaptcha__en.js.download" crossorigin="anonymous" integrity="sha384-4eVJVnSQi48XouWWBCleJxcjDMTY1Z4KmOhd0bvetv4tPVMhPa8rAthYuqSjf197"></script><script async="" src="./PaddlerGames_files/gtm.js.download"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-NBMRDKQ');</script>
+     <!-- End Google Tag Manager -->
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     
+    <meta name="google-site-verification" content="m_3TAXDreGTFyoYnEmU9mcKB4Xtw5mw6yRkuJtXRKxM">
+    <title>Scratch - Imagine, Program, Share</title>
+    
+    <link rel="stylesheet" href="./PaddlerGames_files/jquery.ui.all.css">
+    
+        <link href="./PaddlerGames_files/main.css" rel="stylesheet" type="text/css">
+   
+   <link rel="stylesheet" href="./PaddlerGames_files/handheld.css" media="handheld, only screen and (max-device-width:480px)">
+
+    
+<link href="./PaddlerGames_files/profile.css" rel="stylesheet">
+
+    <script type="text/javascript" src="./PaddlerGames_files/jquery.min.js.download"></script>
+    <script type="text/javascript" src="./PaddlerGames_files/underscore-min.js.download"></script>
+    
+    <script>
+      window.console||(window.console={log:$.noop,error:$.noop,debug:$.noop}); // ensure console fails gracefully when missing
+      // define _gaq here to log errors with GA. ga.js script gets loaded furthe down
+      var sessionCookieName = 'scratchsessionsid';
+      var _gaq = window._gaq || [];
+      _gaq.push(['_setAccount', 'UA-30688952-1']);
+      _gaq.push(['_setSampleRate', '10']);
+      _gaq.push(['_trackPageview']);
+      
+      
+      
+      
+
+      
+    </script>
+    <script type="text/javascript">
+        function getCookie(name) {
+            var cookieValue = null;
+            if (document.cookie && document.cookie != '') {
+                var cookies = document.cookie.split(';');
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = jQuery.trim(cookies[i]);
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+
+        function setCookie(name, value, days) {
+            var expires;
+
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toGMTString();
+            } else {
+                expires = "";
+            }
+            document.cookie = escape(name) + "=" + escape(value) + expires + "; path=/";
+        }
+    </script>
+    
+    <script>
+      
+
+var Scratch = Scratch || {};
+Scratch.INIT_DATA = Scratch.INIT_DATA || {};
+
+
+
+Scratch.INIT_DATA.ADMIN = false;
+Scratch.INIT_DATA.LOGGED_IN_USER = {
+  
+  options: {
+    
+    
+  }
+};
+
+Scratch.INIT_DATA.project_comments_enabled = true;
+Scratch.INIT_DATA.gallery_comments_enabled = true;
+Scratch.INIT_DATA.userprofile_comments_enabled = true;
+
+Scratch.INIT_DATA.BROWSERS_SUPPORTED = {
+
+  chrome: 35,
+  firefox: 31,
+  msie: 8,
+  safari: 7
+};
+
+Scratch.INIT_DATA.TEMPLATE_CUES = {
+
+  unsupported_browser: true,
+  welcome: true,
+  confirmed_email: false
+};
+
+
+
+
+
+
+
+Scratch.INIT_DATA.IS_IP_BANNED = false;
+
+Scratch.INIT_DATA.GLOBAL_URLS = {
+  'media_url': '//uploads.scratch.mit.edu/',
+  'static_url': '//cdn.scratch.mit.edu/scratchr2/static/__e65d8a7c03267938d906e22792610478__/',
+  'static_path': '/scratchr2/static/__e65d8a7c03267938d906e22792610478__/'
+}
+
+Scratch.INIT_DATA.IS_SOCIAL = false;
+
+    </script>
+    
+
+    <meta property="og:type" content="website">
+    
+    <meta property="og:description" content="Make games, stories and interactive art with Scratch. (scratch.mit.edu)">
+    
+
+    
+    <meta property="og:title" content="Scratch - Imagine, Program, Share">
+    <meta property="og:url" content="./projects/">
+    
+
+  </head>
+
+  <body class="">
+  
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBMRDKQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+  
+  <!--[if lte IE 8]>
+  <div class="unsupported-browser banner" data-cue="unsupported_browser">
+    <div class="container">
+      <span>Scratch supports Internet Explorer 9+. We suggest you upgrade to <a href="/info/faq/#requirements">a supported browser</a>, <a href="/scratch2download/">download the offline editor</a>, or <a href="https://en.scratch-wiki.info/wiki/List_of_Bug_Workarounds">read about common workarounds</a>.</span>
+    </div>
+  </div>
+  <![endif]-->
+    <div id="pagewrapper">
+      
+      
+      <div id="topnav">
+      <div class="innerwrap">
+        <div class="container">
+          <a href="https://scratch.mit.edu/" class="logo"><span class="scratch"></span></a>
+          <ul class="site-nav">
+            <li><a id="project-create" href="https://scratch.mit.edu/projects/editor/?tip_bar=home">Create</a></li><li><a href="https://scratch.mit.edu/explore/projects/all">Explore</a></li><li><a href="https://scratch.mit.edu/ideas">Ideas</a></li><li class="last"><a href="https://scratch.mit.edu/about/">About</a></li>
+          </ul>
+          
+          <form class="search" action="https://scratch.mit.edu/search/projects" method="get" form_signature="3337811648845632326" form_signature_string="https://scratch.mit.edu&amp;&amp;q">
+            <input type="submit" class="glass" value="">
+            
+	          <input id="search-input" type="text" placeholder="Search" name="q" field_signature="1012080445" form_signature="3337811648845632326" form_signature_string="https://scratch.mit.edu&amp;&amp;q" visibility_annotation="true">
+          </form>
+          
+          
+          <ul class="account-nav">
+              <li class="join-scratch"><a href="https://scratch.mit.edu/join">Join Scratch</a></li><li id="login-dropdown" class="sign-in dropdown"><span data-toggle="dropdown" class="dropdown-toggle"><span>Sign in</span></span><div class="popover bottom dropdown-menu"><div class="arrow"></div><div class="popover-content"><form method="post" id="login" action="./projects/#" form_signature="18220003511704487406" form_signature_string="https://scratch.mit.edu&amp;login&amp;username&amp;password"><label for="username">Username</label><input type="text" id="login_dropdown_username" name="username" maxlength="30" class="wide username" field_signature="239111655" form_signature="18220003511704487406" form_signature_string="https://scratch.mit.edu&amp;login&amp;username&amp;password" visibility_annotation="false" pm_parser_annotation="username_element" title="pm_parser_annotation: username_element
+"><label for="password" class="password">Password</label><input type="password" name="password" class="wide password" field_signature="2051817934" form_signature="18220003511704487406" form_signature_string="https://scratch.mit.edu&amp;login&amp;username&amp;password" visibility_annotation="false" pm_parser_annotation="password_element" title="pm_parser_annotation: password_element
+"><div class="ajax-loader" style="display:none; float: left;"></div><button type="submit">Sign in</button><span class="forgot-password"><a href="https://scratch.mit.edu/accounts/password_reset/">Need help?</a></span><div class="error"></div></form></div></div></li><li data-control="modal-login" class="sign-in mobile"><span>Sign in</span></li>
+          </ul>
+          
+          <script type="text/template" id="template-account-nav-logged-out">
+          <ul class="account-nav" >
+              <li class="join-scratch"><a href="/join">Join Scratch</a></li><li id="login-dropdown" class="sign-in dropdown"><span data-toggle="dropdown" class="dropdown-toggle"><span>Sign in</span></span><div class="popover bottom dropdown-menu"><div class="arrow"></div><div class="popover-content" ><form method="post" id="login" action="#"><label for="username">Username</label><input type="text" id="login_dropdown_username" name="username" maxlength="30" class="wide username" /><label for="password" class="password">Password</label><input type="password" name="password" class="wide password" /><div class="ajax-loader" style="display:none; float: left;"></div><button type="submit">Sign in</button><span class="forgot-password"><a href="/accounts/password_reset/">Need help?</a></span><div class="error"></div></form></div></div></li><li data-control="modal-login" class="sign-in mobile"><span>Sign in</span></li>
+          </ul>
+          </script>
+          <script type="text/template" id="template-account-nav-logged-in">
+          <ul class="account-nav logged-in"><li class="messages"><a title="messages - updates and notices" href="/messages" class="messages-icon"><span class="notificationsCount none">0</span></a></li><li class="my-stuff"><a title="my stuff - manage projects and studios" href="/mystuff/" class="mystuff-icon"></a></li><li class="logged-in-user dropdown"><span class="user-name dropdown-toggle" data-toggle="dropdown"><img class="user-icon" src="<%- LOGGED_IN_USER.model.thumbnail_url %>" width="24" height="24"><%- LOGGED_IN_USER.model.username_truncated %><span class="caret"></span></span><div class="dropdown-menu blue" ><ul class="user-nav"><li><a href="<%- LOGGED_IN_USER.model.profile_url %>">Profile</a></li><li><a href="/mystuff/">My Stuff</a></li><% if (LOGGED_IN_USER.model.is_educator){ %><li><a href="/educators/classes/">My Classes</a></li><% } %><% if (LOGGED_IN_USER.model.is_student){ %><li><a href="/classes/<%- LOGGED_IN_USER.model.classroom_id %>/">My Class</a></li><% } %><li><a href="/accounts/settings/">Account settings</a></li><li id="logout" class="logout divider"><form method="post" action="/accounts/logout/"><input type='hidden' name='csrfmiddlewaretoken' value='P2GCq9QtlrLGzN6sy39q2HHgu5QTo1K2' /><input type="submit" value="Sign out"></form></li></ul></div></li></ul>
+          </script>
+          <script type="text/javascript" src="./PaddlerGames_files/account-nav.js.download"></script>
+        </div>
+        <iframe class="iframeshim" frameborder="0" scrolling="no" src="./PaddlerGames_files/saved_resource.html"><html><head></head><body></body></html></iframe>
+      </div><!-- innerwrap -->
+      </div>
+        
+
+      <div class="confirm-email banner" data-cue="confirmed_email" style="display:none;">
+        <div class="container">
+          <span><a id="confirm-email-popup" href="./projects/#">Confirm your email</a> to enable sharing. <a href="https://scratch.mit.edu/info/faq/#accounts">Having trouble?</a></span>
+          <div class="close">x</div>
+        </div>
+      </div>
+
+      <div class="email-outage banner" style="display:none; background-color:#FF661A;">
+        <div class="container">
+          <span>We are experiencing a disruption with email delivery. If you are not receiving emails from us, please try after 8am EST.</span>
+          <div class="close">x</div>
+        </div>
+      </div>
+
+        
+        <div class="container" id="content">
+        <div id="alert-view"></div>
+        
+<div class="box">
+  <div class="box-head">
+      <div class="portrait">
+        <a href="../">
+          <img src="./PaddlerGames_files/8071284_60x60.png">
+        </a>
+      </div>
+      <h2><a href="../">PaddlerGames</a> »
+        
+
+	
+
+
+Shared Projects (56)
+
+
+      </h2>
+  </div>
+  <div class="box-content">
+  
+  <div class="media-grid">
+    <ul>
+      
+
+    
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/855893223/">
+    <img class="lazy image" data-original="./project/855893223_144x108.png" width="144" height="108" src="./project/855893223_144x108.png" style="display: block;">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/855893223/">Goodbye.</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/845100492/">
+    <img class="lazy image" data-original="./project/845100492_144x108.png" width="144" height="108" src="./project/845100492_144x108.png" style="display: block;">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/845100492/">Magic Tricks</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/808215360/">
+    <img class="lazy image" data-original="./project/808215360_144x108.png" width="144" height="108" src="./project/808215360_144x108.png" style="display: block;">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/808215360/">2023 Animation Contest Results!</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/789701848/">
+    <img class="lazy image" data-original="./project/789701848_144x108.png" width="144" height="108" src="./project/789701848_144x108.png" style="display: block;">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/789701848/">Undertale Fallen Down Noteblock</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/796030995/">
+    <img class="lazy image" data-original="./project/796030995_144x108.png" width="144" height="108" src="./project/796030995_144x108.png" style="display: block;">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/796030995/">Bread</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/778667580/">
+    <img class="lazy image" data-original="./project/778667580_144x108.png" width="144" height="108" src="./project/778667580_144x108.png" style="display: block;">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/778667580/">(CLOSED) 2023 Animation Contest!</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/731136014/">
+    <img class="lazy image" data-original="./project/731136014_144x108.png" width="144" height="108" src="./project/731136014_144x108.png" style="display: block;">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/731136014/">17k Q&amp;A Answers!</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/700055312/">
+    <img class="lazy image" data-original="./project/700055312_144x108.png" width="144" height="108" src="./project/700055312_144x108.png" style="display: block;">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/700055312/">(CLOSED) 17k Q&amp;A!</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/699809900/">
+    <img class="lazy image" data-original="./project/699809900_144x108.png" width="144" height="108" src="./project/699809900_144x108.png" style="display: block;">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/699809900/">The Short Day</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/623849753/">
+    <img class="lazy image" data-original="./project/623849753_144x108.png" width="144" height="108" src="./project/623849753_144x108.png" style="display: block;">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/623849753/">2022 Animation Contest Results!</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/399963626/">
+    <img class="lazy image" data-original="./project/399963626_144x108.png" width="144" height="108" src="./project/399963626_144x108.png" style="display: block;">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/399963626/">Bee Key Beach</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/405490219/">
+    <img class="lazy image" data-original="./project/405490219_144x108.png" width="144" height="108" src="./project/405490219_144x108.png" style="display: block;">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/405490219/">(CLOSED) 2022 Animation Contest!</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/409016159/">
+    <img class="lazy image" data-original="./project/409016159_144x108.png" width="144" height="108" src="./project/409016159_144x108.png" style="display: block;">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/409016159/">12k Q&amp;A Answers!</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/560430993/">
+    <img class="lazy image" data-original="./project/560430993_144x108.png" width="144" height="108" src="./project/560430993_144x108.png" style="display: block;">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/560430993/">Elevators</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/586238148/">
+    <img class="lazy image" data-original="./project/586238148_144x108.png" width="144" height="108" src="./project/586238148_144x108.png" style="display: block;">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/586238148/">10k Fan Art Contest Results!</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/407184746/">
+    <img class="lazy image" data-original="./project/407184746_144x108.png" width="144" height="108" src="./project/407184746_144x108.png" style="display: block;">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/407184746/">(CLOSED) 12k Q&amp;A!</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/404236363/">
+    <img class="lazy image" data-original="./project/404236363_144x108.png" width="144" height="108" src="./project/404236363_144x108.png" style="display: block;">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/404236363/">Halloween</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/400594823/">
+    <img class="lazy image" data-original="./project/400594823_144x108.png" width="144" height="108" src="./project/400594823_144x108.png" style="display: block;">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/400594823/">(CLOSED) 10k Fan Art Contest!</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/403250774/">
+    <img class="lazy image" data-original="./project/403250774_144x108.png" width="144" height="108" src="./project/403250774_144x108.png" style="display: block;">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/403250774/">9k Q&amp;A Answers!</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/402204610/">
+    <img class="lazy image" data-original="./project/402204610_144x108.png" width="144" height="108" src="./project/402204610_144x108.png" style="display: block;">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/402204610/">Homework</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/571830367/">
+    <img class="lazy image" data-original="./project/571830367_144x108.png" width="144" height="108" src="./project/571830367_144x108.png" style="display: block;">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/571830367/">(CLOSED) 9k Q&amp;A!</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/551143346/">
+    <img class="lazy image" data-original="./project/551143346_144x108.png" width="144" height="108" src="./project/551143346_144x108.png" style="display: block;">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/551143346/">7k Animation Contest Results!</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/462798827/">
+    <img class="lazy image" data-original="./project/462798827_144x108.png" width="144" height="108" src="./project/462798827_144x108.png" style="display: block;">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/462798827/">4th of July</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/483593675/">
+    <img class="lazy image" data-original="./project/483593675_144x108.png" width="144" height="108" src="./project/483593675_144x108.png" style="display: block;">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/483593675/">(CLOSED) 7k Animation Contest!</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/531062886/">
+    <img class="lazy image" data-original="./project/531062886_144x108.png" width="144" height="108" src="./project/531062886_144x108.png" style="display: block;">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/531062886/">Lights 2</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/527679475/">
+    <img class="lazy image" data-original="./project/527679475_144x108.png" width="144" height="108" src="./project/527679475_144x108.png" style="display: block;">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/527679475/">The Pizza Place</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/525023790/">
+    <img class="lazy image" data-original="./project/525023790_144x108.png" width="144" height="108" src="./project/525023790_144x108.png" style="display: block;">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/525023790/">5k PFP Contest Results!</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/523978056/">
+    <img class="lazy image" data-original="./project/523978056_144x108.png" width="144" height="108" src="./project/523978056_144x108.png" style="display: block;">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/523978056/">Legends Never Die</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/479256629/">
+    <img class="lazy image" data-original="./project/479256629_144x108.png" width="144" height="108" src="./project/479256629_144x108.png" style="display: block;">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/479256629/">Out of Stock (Collab with Shadow_Kid21)</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/481791788/">
+    <img class="lazy image" data-original="./project/481791788_144x108.png" width="144" height="108" src="./project/481791788_144x108.png" style="display: block;">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/481791788/">Getting First (ft. sharkyshar)</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/479820531/">
+    <img class="lazy image" data-original="./project/479820531_144x108.png" width="144" height="108" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/479820531/">(CLOSED) 5k PFP Contest!</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/477509655/">
+    <img class="lazy image" data-original="./project/477509655_144x108.png" width="144" height="108" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/477509655/">Tests</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/475928541/">
+    <img class="lazy image" data-original="./project/475928541_144x108.png" width="144" height="108" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/475928541/">Remotes</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/474603946/">
+    <img class="lazy image" data-original="./project/474603946_144x108.png" width="144" height="108" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/474603946/">Lights</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/468869538/">
+    <img class="lazy image" data-original="./project/468869538_144x108.png" width="144" height="108" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/468869538/">4k Q&amp;A Answers!</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/468468263/">
+    <img class="lazy image" data-original="./project/468468263_144x108.png" width="144" height="108" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/468468263/">Plugged In (ft. TheInternetIsCoool)</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/470818937/">
+    <img class="lazy image" data-original="./project/470818937_144x108.png" width="144" height="108" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/470818937/">Pizza Delivery</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/468854737/">
+    <img class="lazy image" data-original="./project/468854737_144x108.png" width="144" height="108" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/468854737/">(CLOSED) 4k Q&amp;A!</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/467706673/">
+    <img class="lazy image" data-original="./project/467706673_144x108.png" width="144" height="108" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/467706673/">New Years</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/464223694/">
+    <img class="lazy image" data-original="./project/464223694_144x108.png" width="144" height="108" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/464223694/">Homework (OLD)</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/459805938/">
+    <img class="lazy image" data-original="./project/459805938_144x108.png" width="144" height="108" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/459805938/">Christmas Everyday</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/457564252/">
+    <img class="lazy image" data-original="./project/457564252_144x108.png" width="144" height="108" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/457564252/">PFP Trends (ft. sharkyshar)</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/448168935/">
+    <img class="lazy image" data-original="./project/448168935_144x108.png" width="144" height="108" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/448168935/">Cars</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/431830293/">
+    <img class="lazy image" data-original="./project/431830293_144x108.png" width="144" height="108" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/431830293/">The Stairs</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/425388728/">
+    <img class="lazy image" data-original="./project/425388728_144x108.png" width="144" height="108" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/425388728/">Lost In Japan (ロストインジャパン) Completed MAP</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/441354597/">
+    <img class="lazy image" data-original="./project/441354597_144x108.png" width="144" height="108" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/441354597/">Trick or Treat</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/424468532/">
+    <img class="lazy image" data-original="./project/424468532_144x108.png" width="144" height="108" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/424468532/">(CLOSED) Lost In Japan MAP (日本になくなる)</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/415069170/">
+    <img class="lazy image" data-original="./project/415069170_144x108.png" width="144" height="108" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/415069170/">Pizza</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/413082294/">
+    <img class="lazy image" data-original="./project/413082294_144x108.png" width="144" height="108" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/413082294/">Computers</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/411422633/">
+    <img class="lazy image" data-original="./project/411422633_144x108.png" width="144" height="108" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/411422633/">1.5k Animation Contest Results!</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/403263217/">
+    <img class="lazy image" data-original="./project/403263217_144x108.png" width="144" height="108" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/403263217/">Pirates</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/402171461/">
+    <img class="lazy image" data-original="./project/402171461_144x108.png" width="144" height="108" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/402171461/">Centuries (Completed MAP)</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/396706594/">
+    <img class="lazy image" data-original="./project/396706594_144x108.png" width="144" height="108" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/396706594/">Trophies</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/392945478/">
+    <img class="lazy image" data-original="./project/392945478_144x108.png" width="144" height="108" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/392945478/">Stuck at Home</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/381109252/">
+    <img class="lazy image" data-original="./project/381109252_144x108.png" width="144" height="108" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/381109252/">Locked Out</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+       <li>
+
+
+
+
+
+
+
+
+
+
+<!-- templates/carousel/project-thumb.html -->
+</li><li class="project thumb item">
+  <a href="https://scratch.mit.edu/projects/377735542/">
+    <img class="lazy image" data-original="./project/377735542_144x108.png" width="144" height="108" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+  </a>
+  <span class="title">
+    <a href="https://scratch.mit.edu/projects/377735542/">Taking Out The Trash</a>
+  </span>
+  <span class="owner">
+      
+        
+            by <a href="../">PaddlerGames</a>
+        
+      
+  </span>
+  
+</li>
+<!-- end templates/carousel/project-thumb.html -->
+
+
+
+
+  
+
+
+    </ul>
+  </div>
+  
+  </div>
+</div>
+
+        </div>
+
+
+        
+        
+    </div>
+    <div id="footer">
+      <div class="container">
+        <style>
+          #footer ul.footer-col li {
+            list-style-type:none;
+            display: inline-block;
+            width: 184px;
+            text-align: left;
+            vertical-align: top;
+          }
+
+          #footer ul.footer-col li h4 {
+            font-weight: bold;
+            font-size: 14px;
+            color: #666;
+          }
+
+        </style>
+        <ul class="clearfix footer-col">
+          <li>
+            <h4>About</h4>
+            <ul>
+              <li><a href="https://scratch.mit.edu/about/">About Scratch</a></li>
+              <li><a href="https://scratch.mit.edu/parents/">For Parents</a></li>
+              <li><a href="https://scratch.mit.edu/educators/">For Educators</a></li>
+              <li><a href="https://scratch.mit.edu/developers">For Developers</a></li>
+              <li><a href="https://scratch.mit.edu/info/credits/">Our Team</a></li>
+              <li><a href="https://www.scratchfoundation.org/supporters">Donors</a></li>
+              <li><a href="https://scratch.mit.edu/jobs/">Jobs</a></li>
+              <li><a href="https://scratch.mit.edu/donate">Donate</a></li>
+            </ul>
+          </li>
+          <li>
+            <h4>Community</h4>
+            <ul>
+              <li><a href="https://scratch.mit.edu/community_guidelines/">Community Guidelines</a></li>
+              <li><a href="https://scratch.mit.edu/discuss/">Discussion Forums</a></li>
+              <li><a href="http://wiki.scratch.mit.edu/">Scratch Wiki</a></li>
+              <li><a href="https://scratch.mit.edu/statistics/">Statistics</a></li>
+            </ul>
+          </li>
+          <li>
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="https://scratch.mit.edu/ideas">Ideas</a></li>
+              <li><a href="https://scratch.mit.edu/info/faq/">FAQ</a></li>
+              <li><a href="https://scratch.mit.edu/download">Download</a></li>
+              <li><a href="https://scratch.mit.edu/contact-us/">Contact Us</a></li>
+            </ul>
+          </li>
+          <li>
+            <h4>Legal</h4>
+            <ul>
+              <li><a href="https://scratch.mit.edu/terms_of_use/">Terms of Use</a></li>
+              <li><a href="https://scratch.mit.edu/privacy_policy/">Privacy Policy</a></li>
+              <li><a href="https://scratch.mit.edu/DMCA/">DMCA</a></li>
+            </ul>
+          </li>
+          <li>
+            <h4>Scratch Family</h4>
+            <ul>
+              <li><a href="http://scratched.gse.harvard.edu/">ScratchEd</a></li>
+              <li><a href="http://www.scratchjr.org/">ScratchJr</a></li>
+              <li><a href="http://day.scratch.mit.edu/">Scratch Day</a></li>
+              <li><a href="https://scratch.mit.edu/conference/">Scratch Conference</a></li>
+              <li><a href="http://www.scratchfoundation.org/">Scratch Foundation</a></li>
+              <li><a href="https://scratch.mit.edu/store">Scratch Store</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="clearfix" id="footer-menu">
+          <li>
+            <form id="lang-dropdown" method="post" action="https://scratch.mit.edu/i18n/setlang/" form_signature="13168918008914435782" form_signature_string="https://scratch.mit.edu&amp;lang-dropdown&amp;language">
+              <select id="language-selection" name="language" field_signature="4249662115" form_signature="13168918008914435782" form_signature_string="https://scratch.mit.edu&amp;lang-dropdown&amp;language" visibility_annotation="true">
+              
+                <option value="ab">Аҧсшәа</option>
+              
+                <option value="af">Afrikaans</option>
+              
+                <option value="ar">العربية</option>
+              
+                <option value="ast">Asturianu</option>
+              
+                <option value="am">አማርኛ</option>
+              
+                <option value="an">Aragonés</option>
+              
+                <option value="az">Azeri</option>
+              
+                <option value="id">Bahasa Indonesia</option>
+              
+                <option value="bn">বাংলা</option>
+              
+                <option value="be">Беларуская</option>
+              
+                <option value="bg">Български</option>
+              
+                <option value="ca">Català</option>
+              
+                <option value="cs">Česky</option>
+              
+                <option value="cy">Cymraeg</option>
+              
+                <option value="da">Dansk</option>
+              
+                <option value="de">Deutsch</option>
+              
+                <option value="et">Eesti</option>
+              
+                <option value="el">Ελληνικά</option>
+              
+                <option value="en" selected="">English</option>
+              
+                <option value="es">Español (España)</option>
+              
+                <option value="es-419">Español Latinoamericano</option>
+              
+                <option value="eo">Esperanto</option>
+              
+                <option value="eu">Euskara</option>
+              
+                <option value="fa">فارسی</option>
+              
+                <option value="fil">Filipino</option>
+              
+                <option value="fr">Français</option>
+              
+                <option value="fy">Frysk</option>
+              
+                <option value="ga">Gaeilge</option>
+              
+                <option value="gd">Gàidhlig</option>
+              
+                <option value="gl">Galego</option>
+              
+                <option value="ko">한국어</option>
+              
+                <option value="ha">Hausa</option>
+              
+                <option value="hy">Հայերեն</option>
+              
+                <option value="he">עִבְרִית</option>
+              
+                <option value="hr">Hrvatski</option>
+              
+                <option value="xh">isiXhosa</option>
+              
+                <option value="zu">isiZulu</option>
+              
+                <option value="is">Íslenska</option>
+              
+                <option value="it">Italiano</option>
+              
+                <option value="ka">ქართული ენა</option>
+              
+                <option value="kk">қазақша</option>
+              
+                <option value="qu">Kichwa</option>
+              
+                <option value="sw">Kiswahili</option>
+              
+                <option value="ht">Kreyòl ayisyen</option>
+              
+                <option value="ku">Kurdî</option>
+              
+                <option value="ckb">کوردیی ناوەندی</option>
+              
+                <option value="lv">Latviešu</option>
+              
+                <option value="lt">Lietuvių</option>
+              
+                <option value="hu">Magyar</option>
+              
+                <option value="mi">Māori</option>
+              
+                <option value="mn">Монгол хэл</option>
+              
+                <option value="nl">Nederlands</option>
+              
+                <option value="ja">日本語</option>
+              
+                <option value="ja-Hira">にほんご</option>
+              
+                <option value="nb">Norsk Bokmål</option>
+              
+                <option value="nn">Norsk Nynorsk</option>
+              
+                <option value="oc">Occitan</option>
+              
+                <option value="or">ଓଡ଼ିଆ</option>
+              
+                <option value="uz">Oʻzbekcha</option>
+              
+                <option value="th">ไทย</option>
+              
+                <option value="km">ភាសាខ្មែរ</option>
+              
+                <option value="pl">Polski</option>
+              
+                <option value="pt">Português</option>
+              
+                <option value="pt-br">Português Brasileiro</option>
+              
+                <option value="rap">Rapa Nui</option>
+              
+                <option value="ro">Română</option>
+              
+                <option value="ru">Русский</option>
+              
+                <option value="nso">Sepedi</option>
+              
+                <option value="tn">Setswana</option>
+              
+                <option value="sk">Slovenčina</option>
+              
+                <option value="sl">Slovenščina</option>
+              
+                <option value="sr">Српски</option>
+              
+                <option value="fi">Suomi</option>
+              
+                <option value="sv">Svenska</option>
+              
+                <option value="vi">Tiếng Việt</option>
+              
+                <option value="tr">Türkçe</option>
+              
+                <option value="uk">Українська</option>
+              
+                <option value="zh-cn">简体中文</option>
+              
+                <option value="zh-tw">繁體中文</option>
+              
+              </select>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+
+    
+<!-- templates/modal-login.html block -->
+	    <div class="modal hide fade in" id="login-dialog" style="width: 450px">
+        <form method="post" action="https://scratch.mit.edu/login/" form_signature="12392607489863210017" form_signature_string="https://scratch.mit.edu&amp;&amp;username&amp;password">
+          <fieldset>
+            <div class="modal-header">
+              <a href="./projects/#" data-dismiss="modal" class="close">x
+              </a>
+	      <h3>Sign in</h3>
+            </div>
+            <div class="modal-body">
+            
+              <div class="control-group">
+		      <label class="control-label" for="username">Username
+                </label>
+                <div class="controls">
+                  <input class="username" type="text" name="username" maxlength="30" field_signature="239111655" form_signature="12392607489863210017" form_signature_string="https://scratch.mit.edu&amp;&amp;username&amp;password" visibility_annotation="false" pm_parser_annotation="username_element" title="pm_parser_annotation: username_element
+">
+                </div>
+              </div>
+              <div class="control-group">
+		            <label class="control-label" for="password">Password
+                </label>
+                <div class="controls">
+                  <input type="password" name="password" class="password" field_signature="2051817934" form_signature="12392607489863210017" form_signature_string="https://scratch.mit.edu&amp;&amp;username&amp;password" visibility_annotation="false" pm_parser_annotation="password_element" title="pm_parser_annotation: password_element
+">
+                </div>
+              </div>
+              
+              <div class="control-group" id="recaptcha_field">
+                <script src="./PaddlerGames_files/api.js.download" async="" defer=""></script>
+                <div class="g-recaptcha" id="recaptcha-container" data-sitekey="6LeRbUwUAAAAAFYhKgk3G9OKWqE_OJ7Z-7VTUCbl"></div>
+              </div>
+              
+            </div>
+            <div class="modal-footer">
+              <span class="error">
+              </span>
+              <div class="buttons-right">
+                <button class="button primary" type="submit">Sign in</button> 
+                
+		<a data-control="registration">Or Join Scratch</a>
+                
+              </div>
+            </div>
+           
+          </fieldset>
+        </form>
+        <iframe class="iframeshim" frameborder="0" scrolling="no" src="./PaddlerGames_files/saved_resource(1).html"><html><head></head><body></body></html></iframe>
+      </div>
+<!-- end templates/modal-login.html -->
+
+    
+        <div id="registration" class="registration modal hide fade" data-backdrop="static">
+          <iframe class="iframeshim" frameborder="0" scrolling="no" src="./PaddlerGames_files/saved_resource(2).html"><html><head></head><body></body></html></iframe>
+        </div>
+    
+
+    
+    
+
+    
+    
+
+    <script type="text/javascript" src="./PaddlerGames_files/jquery-ui.min.js.download"></script>
+
+    <script type="text/javascript" src="./PaddlerGames_files/main.js.download" charset="utf-8"></script>
+
+  
+  <script type="text/javascript">
+    // load gaq script
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+    <script type="text/javascript" src="./PaddlerGames_files/base.js.download" charset="utf-8"></script>
+    <script type="text/javascript" src="./PaddlerGames_files/lazyload.js.download" charset="utf-8"></script>
+    
+    
+
+    
+    
+
+
+<script type="text/template" id="template-collection-count">
+  <%- count %>
+</script>
+
+<script type="text/template" id="template-comment-actions">
+<% if (can_delete) { %>
+  <% if (is_staff && comment_user == current_user) { %>
+    <span data-control="delete" class="actions report">Delete</span>
+  <% } else if (type != "gallery" || comment_user == current_user) { %>
+    <span data-control="delete" class="actions report">Delete</span>
+  <% } %>
+<% } %>
+<% if (current_user != comment_user) { %>
+  <span data-control="report" class="actions report">
+  <% if (student_of_educator) { %>
+    Delete
+  <% } else { %>
+    Report
+  <% } %></span>
+<% } %>
+</script>
+
+<script type="text/template" id="template-modal-login">
+<div class="modal hide fade in" id="login-dialog" style="width: 450px">
+  <form method="post" action="/login/">
+    <fieldset>
+      <div class="modal-header">
+        <a href="#" data-dismiss="modal" class="close">x
+        </a>
+        <h3>Login</h3>
+      </div>
+      <div class="modal-body">
+        <div class="control-group">
+        <label class="control-label" for="username">Username
+          </label>
+          <div class="controls">
+            <input id="username" type="text" name="username" maxlength="30" />
+          </div>
+        </div>
+        <div class="control-group">
+        <label class="control-label" for="password">Password
+          </label>
+          <div class="controls">
+            <input type="password" name="password" id="password" />
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <span class="error">
+        </span>
+        <span class="button primary" id="sign-in" data-control="site-login">
+        <span>{% trans "Sign in" $}
+          </span>
+        </span>
+      </div>
+    </fieldset>
+  </form>
+</div>
+</script>
+
+<script type="text/template" id="template-comment-reply">
+  <form>
+    <div class="control-group tooltip right">
+      <textarea name="content"></textarea>
+      
+      <span class="hovertext error" data-control="error" data-content="comment-error"><span class="arrow"></span><span class="text"></span></span>
+      <span class="small-text">You have <span id="chars-left-<%- comment_id %>">500</span> characters left.</span>
+    </div>
+    <div class="control-group">
+        <div class="button small" data-parent-thread="<%- thread_id %>" data-commentee-id="<%- commentee_id %>" data-control="modal-login"><a href="#null">Post</a></div>
+        <div class="button small grey" data-control="cancel"><a href="#null">Cancel</a></div>
+      <span class="notification"></span>
+    </div>
+  </form>
+</script>
+
+<script type="text/template" id="template-deletion-canceled">
+<div class="deletion-canceled">
+  <div class="form">
+    <p>
+    Your account was scheduled for deletion but you logged in. Your account has been reactivated. If you didn’t request for your account to be deleted, you should <a href="/accounts/password_change/">change your password</a> to make sure your account is secure. 
+    </p>
+  </div>
+</div>
+</script>
+
+<script type="text/template" id="template-unsupported-browser">
+  <div class="unsupported-browser banner" data-cue="unsupported_browser">
+    <div class="container">
+      <span>Scratch works best on newer browsers. We suggest you upgrade to <a href="/info/faq/#requirements">a supported browser</a>, <a href="/scratch2download/">download the offline editor</a>, <a href="https://en.scratch-wiki.info/wiki/List_of_Bug_Workarounds">or read about common workarounds</a>.</span>
+      <div class="close">x</div>
+    </div>
+  </div>
+</script>
+
+<script type="text/template" id="template-unsupported-msie">
+  <div class="unsupported-browser banner" data-cue="unsupported_browser">
+    <div class="container">
+      <span>Scratch will stop supporting Internet Explorer 8 on April 30, 2015. We suggest you upgrade to <a href="/info/faq/#requirements">a supported browser</a>, <a href="/scratch2download/">download the offline editor</a>, or <a href="https://en.scratch-wiki.info/wiki/List_of_Bug_Workarounds">read about common workarounds</a>.</span>
+      <div class="close">x</div>
+    </div>
+  </div>
+</script>
+
+
+
+
+    
+
+    
+
+    <!-- load javascript translation catalog, and javascript fuzzy date library -->
+    <script type="text/javascript" src="./PaddlerGames_files/saved_resource"></script>
+    <script type="text/javascript" src="./PaddlerGames_files/jquery.timeago.settings.js.download"></script>
+
+    
+    <script type="text/javascript" src="./PaddlerGames_files/main.js(1).download"></script>
+    
+
+    <script type="text/javascript" src="./PaddlerGames_files/global.js.download"></script>
+    <script>
+      Scratch.NotificationPollTime = 300000;
+    </script>
+
+    
+
+    
+    <script>
+    $(document).on("accountnavready", function(e){
+        $('#topnav .messages').notificationsAlert();
+    });
+    </script>
+    
+    <script type="text/javascript">
+      var today = new Date();
+      if (today.getDate() === 1 && today.getMonth() === 3) {
+        document.write(';');
+      }
+    </script>
+  
+  
+
+</body><!-- Site Version: 3.2023.03.16.1_2023_03_16_10_38 --></html>
